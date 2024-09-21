@@ -20,14 +20,14 @@ class Item():
         self.isFloating = False
         # Image Load
         if item_type in item_type_list:
-            self.image = pygame.image.load(f"Assets\Sprites\items\{item_type}.png").convert_alpha()
+            self.image = pygame.image.load(f"Assets/Sprites/items/{item_type}.png").convert_alpha()
             self.image.convert()
             if item_type == "coin":
                 self.isCoin = True
             if item_type == "health":
                 self.isHealth = True
         else: # Sets Default Image
-            self.image = pygame.image.load(f"Assets\Sprites\items\default.png").convert_alpha()
+            self.image = pygame.image.load(f"Assets/Sprites/items/default.png").convert_alpha()
             self.image.convert()
         
     def player_contact(self, player): # Collision Check with player model

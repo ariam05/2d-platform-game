@@ -105,10 +105,10 @@ def show_fps():
 
 def main_menu():
     click = False
-    def create_font(t, s=72, c=(255, 255, 255), b=False, i=False):
-        font = pygame.font.Font('freesansbold.ttf', s, bold=b, italic=i)
-        text = font.render(t, True, c)
-        return text
+def create_font(t, s=72, c=(255, 255, 255), b=False, i=False):
+    font = pygame.font.Font('freesansbold.ttf', s)  # Only pass font path and size
+    text = font.render(t, True, c)
+    return text
 
     while True:
 
